@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylebeat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="toggle-theme">🌓</button>
+        <div class="animated-text">
+           <h1>Stylebeat</h1>
+        
+        <div>
+            <p>Choose a musical genre and see the fashion recommendations inspired by it!</p>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Dropdown pentru alegerea genului muzical -->
+        <label for="music-genre">Select a music genre:</label>
+        <select id="music-genre" onchange="updateFashionRecommendations()">
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="jazz">Jazz</option>
+            <option value="hiphop">Hip-hop</option>
+            <option value="classical">Clasic</option>
+        </select>
+
+        <!-- Container pentru recomandările de modă -->
+        <div id="fashion-recommendations" class="fashion-recommendations">
+            <!-- Recomandările vor fi afișate aici -->
+        </div>
+        
+        <!-- Buton pentru redarea unui fragment de muzică -->
+        <button onclick="playMusic()">Play Music</button>
+    </div>
+
+    <audio id="music-player" src="c:\Users\Roxi\Downloads\AC_DC - Thunderstruck (Official Video).mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
